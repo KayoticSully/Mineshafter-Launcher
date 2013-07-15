@@ -26,7 +26,7 @@ import com.google.gson.Gson;
 import mineshafter.Util;
 
 public class YggdrasilProxyHandler implements HttpProxyHandler, SocksProxyHandler {
-	public static String authServer = "mineshafter.info";
+	public static String authServer = "api.mineshaftersquared.com";
 
 	public static Pattern SKIN_URL = Pattern.compile("http://skins\\.minecraft\\.net/MinecraftSkins/(.+?)\\.png");
 	public static Pattern CLOAK_URL = Pattern.compile("http://skins\\.minecraft\\.net/MinecraftCloaks/(.+?)\\.png");

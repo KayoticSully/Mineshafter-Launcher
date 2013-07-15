@@ -126,7 +126,7 @@ public class Util {
 
 	public static float getCurrentBootstrapVersion() {
 		try {
-			byte[] verdata = SimpleRequest.get(new URL("http://mineshafter.info/bootver"));
+			byte[] verdata = SimpleRequest.get(new URL("http://api.mineshaftersquared.com/launcher/version"));
 			String verstring;
 			if (verdata == null) verstring = "0";
 			else verstring = new String(verdata);
