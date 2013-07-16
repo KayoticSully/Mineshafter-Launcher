@@ -26,7 +26,8 @@ import com.google.gson.Gson;
 import mineshafter.Util;
 
 public class YggdrasilProxyHandler implements HttpProxyHandler, SocksProxyHandler {
-	public static String authServer = "api.mineshaftersquared.com";
+	//public static String authServer = "api.mineshaftersquared.com";
+    public static String authServer = "mineshafter.info";
 
 	public static Pattern SKIN_URL = Pattern.compile("http://skins\\.minecraft\\.net/MinecraftSkins/(.+?)\\.png");
 	public static Pattern CLOAK_URL = Pattern.compile("http://skins\\.minecraft\\.net/MinecraftCloaks/(.+?)\\.png");
@@ -146,6 +147,7 @@ public class YggdrasilProxyHandler implements HttpProxyHandler, SocksProxyHandle
 				reader.read(body);
 				String postedJSON = new String(body);
 				String response = authServerEndpoint(endpoint, postedJSON);
+                System.out.println("RES: " + response);
 				sendResponse(out, "application/json", response);
 
 			} catch (IOException e) {
@@ -193,6 +195,7 @@ public class YggdrasilProxyHandler implements HttpProxyHandler, SocksProxyHandle
 		YggdrasilRequest data = gson.fromJson(postedJSON, YggdrasilRequest.class);
 
 		System.out.println("Proxy postedJSON: " + postedJSON);
+
 		if (endpoint.equalsIgnoreCase("authenticate")) {
 			String reply = imp.authenticate(data);
 			System.out.println("Proxy authenticate response: " + reply);

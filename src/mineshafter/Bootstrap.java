@@ -169,7 +169,7 @@ public class Bootstrap extends JFrame {
 		System.out.println("Current proxy version: " + mineshafterBootstrapVersion);
 		System.out.println("Gotten proxy version: " + v);
 		if (mineshafterBootstrapVersion < v) {
-			JOptionPane.showMessageDialog(null, "A new version of Mineshafter is available at http://mineshafter.info/\nGo get it.", "Update Available", JOptionPane.PLAIN_MESSAGE);
+			JOptionPane.showMessageDialog(null, "A new version of Mineshafter is available at http://MineshafterSquared.com\nGo get it.", "Update Available", JOptionPane.PLAIN_MESSAGE);
 			System.exit(0);
 		}
 
